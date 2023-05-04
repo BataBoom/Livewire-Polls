@@ -41,11 +41,4 @@ class Vote extends Model
         ->orderByDesc('total');
      }
 
-    public function results()
-    {
-
-    $votes = Vote::mostForPoll($poll->id)->get();
-
-
-    }
 }
