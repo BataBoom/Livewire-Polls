@@ -15,7 +15,7 @@ class CreatePollOptionsTable extends Migration
     {
         Schema::create('poll_options', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('poll_id')->references('id')->on('polls');
+            $table->foreignId('poll_id')->references('id')->on('polls')->onDelete('cascade');
             $table->string('option_text');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('expires_at')->nullable();
