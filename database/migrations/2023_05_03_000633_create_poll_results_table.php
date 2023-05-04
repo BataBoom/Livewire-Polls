@@ -16,8 +16,8 @@ class CreatePollResultsTable extends Migration
     Schema::create('poll_results', function (Blueprint $table) {
         $table->id();
         $table->string('selection');
-        $table->foreignId('poll_id')->references('id')->on('polls');
-        $table->foreignId('poll_option_id')->references('id')->on('poll_options');
+        $table->foreignId('poll_id')->references('id')->on('polls')->onDelete('cascade');
+        $table->foreignId('poll_option_id')->references('id')->on('poll_options')->onDelete('cascade');
         $table->foreignId('user_id')->references('id')->on('users');
         $table->timestamp('created_at');
         
