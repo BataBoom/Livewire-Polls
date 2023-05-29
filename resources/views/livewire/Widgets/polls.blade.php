@@ -28,7 +28,7 @@
 </div>
 <div wire:loading.delay.longest wire:loading wire:target="submit">
 
-  <h1 class="has-text-primary is-size-4 has-text-centered"> Loading..</h1>
+  <h1 class="has-text-primary is-size-3 has-text-centered"> Loading..</h1>
 
     </div>
 </center>
